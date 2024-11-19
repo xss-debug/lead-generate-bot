@@ -3,8 +3,7 @@ import requests
 import re
 
 AIRTABLE_API_KEY = os.environ['AIRTABLE_API_KEY']
-AIRTABLE_BASE_ID = os.environ[
-    'AIRTABLE_BASE_ID']  # Assuming you set this in your environment variables
+AIRTABLE_BASE_ID = os.environ['AIRTABLE_BASE_ID']  # Assuming you set this in your environment variables
 
 # The tool configuration
 tool_config = {
@@ -65,7 +64,7 @@ def store_lead(arguments):
     return "Invalid phone number format. Please provide a valid phone number."
 
   # Airtable API URL and headers
-  url = f"https://api.airtable.com/v0/{AIRTABLE_BASE_ID}/Leads"
+  url = f"https://api.airtable.com/v0/{AIRTABLE_BASE_ID}/Table%201"
   headers = {
       "Authorization": f"Bearer {AIRTABLE_API_KEY}",
       "Content-Type": "application/json"
